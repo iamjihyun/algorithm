@@ -19,7 +19,7 @@ public class StockPrice {
 		// 4초 시점의 ₩2은 1초간 가격이 떨어지지 않았습니다.
 		// 5초 시점의 ₩3은 0초간 가격이 떨어지지 않았습니다.
 		// ※ 공지 - 2019년 2월 28일 지문이 리뉴얼되었습니다.
-		System.out.println("ll");
+		System.out.println("3월 8일");
 
 	}
 
