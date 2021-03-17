@@ -12,7 +12,8 @@ public class Center {
 //        "abcde"	"c"
 //        "qwer"
 
-        solution("qwer");
+        String result = solution("qwer");
+        System.out.println(result);
     }
 
     public static String solution(String s){
