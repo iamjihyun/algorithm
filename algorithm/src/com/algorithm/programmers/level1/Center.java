@@ -9,7 +9,31 @@ public class Center {
 //        s는 길이가 1 이상, 100이하인 스트링입니다.
 //        입출력 예
 //        s	return
-//                "abcde"	"c"
+//        "abcde"	"c"
 //        "qwer"
+
+        solution("qwer");
+    }
+
+    public static String solution(String s){
+        int len = 0;
+        len = s.length();
+        System.out.println(len);
+        char[] a = s.toCharArray();
+        char[] b = new char[2];
+        int center = 0;
+        String result = "";
+        if(len % 2 == 0){
+            //짝수글자
+            b[0] = a[(len/2)-1];
+            b[1] = a[(len/2)];
+            //result = b.toString();
+            //System.out.println(a[(len/2)]);
+        }else{
+            b[0] = a[(len/2)];
+            //홀수글자
+        }
+        result = b.toString();
+        return result;
     }
 }
