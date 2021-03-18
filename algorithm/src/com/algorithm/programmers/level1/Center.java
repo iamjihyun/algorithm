@@ -12,7 +12,7 @@ public class Center {
 //        "abcde"	"c"
 //        "qwer"
 
-        String result = solution("qwer");
+        String result = solution("abcde");
         System.out.println(result);
     }
 
@@ -20,21 +20,32 @@ public class Center {
         int len = 0;
         len = s.length();
         System.out.println(len);
+
         char[] a = s.toCharArray();
-        char[] b = new char[2];
-        int center = 0;
+        char[] b;
+        int centerIdx = 0;
+
         String result = "";
         if(len % 2 == 0){
             //짝수글자
-            b[0] = a[(len/2)-1];
-            b[1] = a[(len/2)];
+            centerIdx = len/2;
+            b = new char[2];
+            b[0] = a[centerIdx-1];
+            b[1] = a[centerIdx];
             //result = b.toString();
             //System.out.println(a[(len/2)]);
         }else{
-            b[0] = a[(len/2)];
+            b = new char[1];
+            centerIdx = len/2;
+            System.out.println( centerIdx );
+
+            b[0] = a[centerIdx];
             //홀수글자
         }
-        result = b.toString();
+
+        result = String.valueOf(b);
+
         return result;
+
     }
 }
