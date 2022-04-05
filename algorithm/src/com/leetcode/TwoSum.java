@@ -2,9 +2,11 @@ package com.leetcode;
 
 
 public class TwoSum {
-    public TwoSum() {
-    }
 
+    //한개의 답은 무조건 존재함.
+    //2~10000사이의 길이를 가진 배열
+    //만약 답이 2,3일경우 3,2인 경우는 제외(중복되면 안됨.)
+    //배열 탐색
     public static void main(String[] args) {
         int[] arr3 = new int[5];
         String[] arr4 = new String[5];
