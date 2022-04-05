@@ -26,18 +26,21 @@ public class ClawMachineGame {
             //15351214
             //x값이 정해져있다. 그렇다면 세로(y) 크기만큼 움직여 0이아닌 값을 빼고 0으로 설정.
             int xIdx = moves[i]-1;
-
+            int a = 0;
             for(int j = 0; j < board.length; j++){
                 if(board[j][xIdx]!=0) {
                     //담기
                     stack.add(board[j][xIdx]);
-
-                    if( stack.size() > 1){
-                        System.out.println("안드러오면되자나.... : " + stack.size());
-                        System.out.println(stack.get(stack.size()-1));
-                        //stack.remove(stack.size()-1);
-                        //stack.remove(stack.size()-2);
-                        answer += 2;
+                    if(stack.size()>=2) {
+                         a = stack.size();
+                        if (a >= 2 || stack.get( a - 1) == stack.get( a - 2)) {
+                            //System.out.println("안드러오면되자나.... : " + stack.size());
+                            System.out.println("aa"+ (a-1));
+                            System.out.println("aa"+ (a-2));
+                            stack.remove((a - 1));
+                            stack.remove((a - 2));
+                            answer += 2;
+                        }
                     }
                     //System.out.println("board["+j+"]["+xIdx+"] : " + board[j][xIdx]);
                     board[j][xIdx] = 0;
@@ -48,15 +51,15 @@ public class ClawMachineGame {
 
         }
         //삭제 후에 삭제된 데이터 앞 뒤로 같은 숫자이면 어떻게 해결 할 것인가?
-//        for(int k =0; k < stack.size()-1; k++){
-//            //두개가 같은것이 나오면 둘다 삭제
-//            if(stack.size() >= 2 || stack.get(k) == stack.get(k+1)){
-////                stack.remove(k);
-////                stack.remove((k+1));
-//                System.out.println(stack.get(k));
-//                answer += 2;
-//            }
-//        }
+        for(int k =0; k < stack.size()-1; k++){
+            //두개가 같은것이 나오면 둘다 삭제
+
+//                stack.remove(k);
+//                stack.remove((k+1));
+                System.out.println(stack.get(k));
+                //answer += 2;
+
+        }
 
         System.out.println("answer : " + answer);
         return answer;
