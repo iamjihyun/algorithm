@@ -1,6 +1,6 @@
 package com.leetcode;
 
-public class PalindromeNumber {
+public class _02PalindromeNumber {
     public static void main(String[] args) {
         boolean result;
         int num = 12344321;

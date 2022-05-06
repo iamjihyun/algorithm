@@ -1,7 +1,7 @@
 package com.leetcode;
 
 
-public class TwoSum {
+public class _01TwoSum {
 
     //한개의 답은 무조건 존재함.
     //2~10000사이의 길이를 가진 배열
